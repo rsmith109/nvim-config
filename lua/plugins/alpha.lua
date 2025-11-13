@@ -20,6 +20,13 @@ return {
 
       dashboard.section.footer.val = #require("lazy").plugins() .. " Plugins in total"
 
+      dashboard.section.buttons.val = {
+        dashboard.button( "b", "󰘧  > Browse files" , ":e .<CR>"),
+        dashboard.button( "f", "󰘧  > Find file" , ":Telescope find_files<CR>"),
+        dashboard.button( "r", "󰘧  > Recent" , ":Telescope oldfiles<CR>"),
+        dashboard.button( "q", "󰘧  > Quit" , ":qa<CR>"),
+      }
+
       dashboard.config.layout = {
         { type = "padding", val = 5 },
         dashboard.section.header,

@@ -1,16 +1,10 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set number relativenumber")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("core.lazy")
+require("core.lsp")
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
 
-
-vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    spacing = 2,
-  }
+require("lazy").setup({
+  {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"}
 })
-
-
-require("config.lazy")
