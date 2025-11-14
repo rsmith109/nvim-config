@@ -1,5 +1,6 @@
 vim.lsp.enable({
-    "lua_ls"
+    "lua_ls",
+    "nixd",
 })
 
 vim.diagnostic.config({
